@@ -1,6 +1,10 @@
 # CankuFluentPython
 
-# Cruel Fluent Python 群规
+## 说明
+- 书在 books/ 目录下
+- 打卡在 homework/年月/日 目录下
+
+## Cruel Fluent Python 群规
 0. 欢迎群友们对打卡任务和群规提交建议；
 1. 本群是残酷群的子群，群友必须参加残酷刷题群（主群），群规建立在残酷群规之上；
 2. 每日作业在次日UTC4点检查，连续两天未打卡成功请发红包；
