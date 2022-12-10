@@ -1,0 +1,51 @@
+# Fluent Python pp 1-8
+
+### 1. Python 数据类型
+
+- Magic method
+  - 比如 `__getitem__`
+
+### 1.1 纸牌class
+
+```python
+import collections
+
+# 用 namedtuple 来构造简单的类
+Card = collections.namedtuple('Card', ['rank', 'suit'])
+
+class FrenchDeck:
+  # 牌大小
+  ranks = [str(n) for n in range(2, 11)] + list('JQKA')
+  # 花色，用string+分割处理
+  suits = 'spades diamonds clubs hearts'.split()
+  
+  def __init__self():
+    # 每张牌都是一个类
+    self._cards = [Card(rank, suit) for suit in self.suits
+                  									for rank in self.ranks]
+  # 实现 len(实例)
+  def __len__(self):
+    return len(self._cards)
+  
+  # 实现 实例[k]
+  def __getitem__(self, position):
+    return self._cards[position]
+```
+
+别的支持，已有实例 `deck = FrenchDeck()`：
+
+- 随机抽牌：使用标准库 `random.choice` 
+  - `choice(deck)` 即可随机抽
+- slicing `deck[12::13] `取所有的Ace
+- iteration操作 `for card in deck`
+
+- in 操作: `Card('Q', 'hearts') in deck` 返回 True/False
+- 排序 `sorted(deck, key=spades_high)`，其中 `spades_high` 是个返回每个card的value的函数 `def spades_high(card) -> int`
+
+不支持：
+
+- 洗牌，因为现在这个结构是不可变的，之后第十一章实现 `__setitem__` 之后就可以变了。
+
+  
+
+二维向量的例子忽略，比较简单。
