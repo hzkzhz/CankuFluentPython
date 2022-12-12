@@ -1,0 +1,43 @@
+20221212    Page 38 - 45
+
+#### How Special Methods Are Used
+这类special methods不是给coder用，而是给编译器调用。很多内置类型底层用C实现，这样用更快。
+
+这类方法大部分时候也不是被直接调用，比如在 `for i in x`，就会唤起`x.__iter__()`或者`x.__getitem__()`
+
+除了`__init__` 以外的special method，都不建议过多直接调用。
+
+ME:: 切二分的题时，写一个类只要实现了 `__getitem__` ，就可以直接在上面 `bisect`了
+
+##### Emulating Numeric Types
+写了个简单的类，实现二维向量的基本操作，主要实现了下面5个内置方法：
+`__abs__`   abs(self)
+`__add__`   self + x
+`__mul__`   self * x
+
+如果要右乘，使用：
+`__rmul__`  x * self
+
+##### String Representation
+`__repr__` 
+[Python 格式字符串语法](https://docs.python.org/zh-cn/3.10/library/string.html#format-string-syntax)里有个 `!r`，是good prctice。
+python里优先实现 `__repr__`  而不是 `__str__` 
+
+`__repr__`  goal is to be unambiguous
+`__str__`    goal is to be readable
+
+##### Boolean Value of a Custom Type
+`__bool__`  bool(self)
+用于条件控制语句、逻辑运算等。如果没实现 `__bool__`  就会去调用 `__len__` 
+python 里任何对象都有可能被用于逻辑判断，这个方法最好还是想清楚实现了。
+
+
+##### Collection API
+
+* Iterable: `__iter__`
+* Sized: `__len__`
+* Container: `__contains__`
+* Sequence: `__getitem__`, ...
+* Mapping: `__getitem__`, ...
+* Set: `__and__`, ...
+* Reversible: `__reversed__`
