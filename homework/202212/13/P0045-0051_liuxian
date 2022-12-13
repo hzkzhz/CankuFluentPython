@@ -1,0 +1,20 @@
+20221213    Page 45 - 51
+
+#### Overview of Special Methods
+
+一大堆数值、数学运算，都有对应的 special method
+
+#### Why len Is Not a Method
+
+一句话 —— 就是快
+
+*'practicality beats purity.'*
+*'Special cases aren't special enough to break the rules.'*
+
+#### Chapter Summary
+
+Python 自带的数值类型 `Decimal` 和 `Fraction` 以及 `NumPy`，都很好地实现了这些方法。
+通过实现这些特殊方法，写的类可以容易被使用，并且看起来 Pythonic。
+书后面会讲其他特殊方法的用法。
+
+有空看看[数据模型官方文档](https://docs.python.org/zh-cn/3.10/reference/datamodel.html)
