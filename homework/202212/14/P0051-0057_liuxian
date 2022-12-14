@@ -1,0 +1,38 @@
+20221214    Page 51 - 57
+
+
+### CHAPTER 2 An Array of Sequences
+
+这章要讲各种sequence的用法。对理解python数据类型，和自己实现对象会有帮助。
+
+#### Overview of Built-In Sequences
+
+* `Container sequences`: `list, tuple, deque` 可以装不同类型的数据，存的是对象的reference
+* `Flat sequences`: `str, bytes, array` 只能装同一种类型，存的是内容本身
+
+`tuple` 里每个“值”都是一个对象。而`array`本身只是一个对象。
+
+
+* `Mutable sequences`: `list, bytearray, array, deque`
+* `Immutable sequences`: `tuple, str, bytes`
+
+
+```
+>>> from collections import abc
+>>> issubclass(tuple, abc.Sequence)
+True
+>>> issubclass(list, abc.MutableSequence)
+True
+```
+
+
+#### List Comprehensions and Generator Expressions
+
+
+listcomps and genexps
+
+##### List Comprehensions and Readability
+
+listcomp的形式，很明确地产生一个新的List。
+不要太长。
+在 [], {}, () 这3个界定符中，可以随意换行。如果每行区分一个对象，那么最后一行的最后最好也加个逗号。
