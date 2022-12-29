@@ -17,4 +17,5 @@ print(d_proxy[2]) # Output: 'B'
 mylist = ['apple', 'banana', 'cherry']
 x = frozenset(mylist)
 x[1] = "strawberry" # This would cause error since x is unchangable.
+x.add("pear") # This would cause error since x doesn't have attribute 'add'
 ```
