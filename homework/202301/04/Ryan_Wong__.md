@@ -1,7 +1,13 @@
-# p0283~0333 Functions as Objects III
- - 类型提示是python 3.6的新特性，用于描述函数因变量和返回值的类型建议，可通过Mypy这个静态类型检查工具来在编辑器中实现类型检查并补全类型提示。
+# p0283~0324 Functions as Objects III
+ - 类型提示是python 3.6的新特性，需要import typing模块，用于描述函数因变量和返回值的类型建议，可通过Mypy这个静态类型检查工具来在编辑器中实现类型检查并补全类型提示。
  - 可用的类型提示
     - Any：任意类型变量可用，它不执行类型检查，可用作未知变量的紧急出口
     - 简单类型：如str、int、float等
     - Optional和Union：Union是联合类型，Union[X, Y]表示非X类型即Y类型，Optional[X]等价于Union[X, None]
- - 胜多负少的
+    - 泛型/参数化泛型：如list[T]、dict[T]、set[T]等，是参数化T类型的列表、字典、集合泛型版本（一般地，T可以去参数化，具象为简单类型）
+    - 元组：tuple[T1, T2, T3]
+    - 抽象基类：例如Mapping[KT, VT]，容许dict、defaultdict、UserDict、ChainMap等等类似的类型
+    - 可迭代对象：Iterable
+    - 静态协议：老实说没看懂，应该是含有一些特定抽象方法的抽象基类
+    - 可回调对象：Callable[[ArgT1,ArgT2], ReturnT]
+    - NoReturn: 没有返回值
