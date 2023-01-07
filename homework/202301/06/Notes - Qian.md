@@ -22,3 +22,10 @@ Output: (5, 5)
 
 # 规范化文本匹配实用函数
 对大多数应用来说，NFC 是最好的规范化形式。不区分大小写的比较应该使用 str.casefold()。
+```
+s1 = 'café'
+s2 = 'cafe\u0301'
+s1 == s2 => Flase
+nfc_equal(s1, s2) => True
+nfc_equal('A', 'a') => False
+```
