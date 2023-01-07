@@ -8,6 +8,6 @@ The principle here is to do the first step as early as possible and do the third
 #### You should read the file using the same encoding method as writing the file. Explicitly declare the encoding method when reading a file.
 
 
-
+### 关于编码默认值的最佳建议是:别依赖默认值。
 
 
