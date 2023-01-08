@@ -8,3 +8,6 @@ if not unicodedata.combining(c)) ➋ return unicodedata.normalize('NFC', shaved)
 ➋ 过滤掉所有组合记号。
 ➌ 重组所有字符。
 ```
+
+
+`if unicodedata.combining(c) and latin_base:` - 基字符为拉丁字母时，跳过组合记号。
