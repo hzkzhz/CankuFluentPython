@@ -7,7 +7,22 @@ def tag(cls=None, **attrs):
         attrs['class'] = cls # the value of attrs is a class
 ```
 
-# Some methods to generate HTML elements
+# Define a method to generate HTML elements
+
+```
+def tag(name, *content, cls=None, **attrs):
+    if cls is not None:
+        attrs['class'] = cls
+    if attrs:
+        attr_str = ''.join(' %s="%s"' % (attr, value) for attr, value in sorted(attrs.items()))
+    else:
+        attr_str = ''
+    if content:
+        return '\n'.join('<%s%s>%s</%s>' %(name, attr_str, c, name) for c in content)
+    else:
+        return '<%s%s />' % (name, attr_str)
+```
+
 ```
 tag('bar') # '<br />'
 
