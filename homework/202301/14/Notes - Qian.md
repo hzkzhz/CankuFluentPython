@@ -15,3 +15,13 @@ def match_asian_countries_pos():
                 results.append(country)
     return results
 ```
+
+
+# Object References, Mutability, and Recycling
+The list uses swallow copy.
+```
+a = [1,2,3]
+b = a
+a.append(4)
+print(b) # [1, 2, 3, 4]
+```
