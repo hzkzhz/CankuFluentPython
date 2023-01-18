@@ -6,7 +6,7 @@
 
 # The Relative Immutability of Tuples
 - The immutability of tuples really refers to the physical contents of the tuple data structure and does not extend to the referenced objects. 简单地说就是，tuple整体不能变，但是它里面的元素如果是可以被修改的，那还是可以修改。
-- Copies Are Shallow by Default
+- Copies Are Shallow by Default. Only copy content but not pointing to the same address.
 ```
 l1 = [3, [55, 44], (7, 8, 9)]
 l2 = list(l1)
