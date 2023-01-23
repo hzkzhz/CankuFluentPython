@@ -1,6 +1,6 @@
 # collections.deque
 
-collections.deque is a `thread-safe` double-ended queue.
+collections.deque is a `thread-safe` double-ended queue. It provides the synchronized classes such as SimpleQueue, Queue, LifoQueeu, and PriorityQueue.
 ```
 deque([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], maxlen=10) # max length is 10
 dq.appendleft(-1)
