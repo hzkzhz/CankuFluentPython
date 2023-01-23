@@ -5,3 +5,5 @@
 ### Functions as First-Class Objects
 
 ![Screen Shot 2023-01-22 at 10 57 08 PM](https://user-images.githubusercontent.com/73077953/213981887-3c2c01d0-ef1d-4f11-b7ff-efc3ab07a506.png)
+
+![Screen Shot 2023-01-22 at 10 58 44 PM](https://user-images.githubusercontent.com/73077953/213983118-d164277a-100a-443c-83ff-79ae0848bb7f.png)
