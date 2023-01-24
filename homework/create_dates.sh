@@ -1,1 +1,1 @@
-for i in {01..30}; do echo "$i"; mkdir $i; touch $i/.gitignore; done
+for day in 0{1..9} {10..31} ; do mkdir ${day}; touch ${day}/.gitignore; done
