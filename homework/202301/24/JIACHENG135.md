@@ -12,7 +12,8 @@
     - listcomp to build a list
         ```bash
         >>> symbols = '$¢£¥€¤'
-        >>> codes = [ord(symbol) for symbol in symbols] >>> codes
+        >>> codes = [ord(symbol) for symbol in symbols] 
+        >>> codes
         [36, 162, 163, 165, 8364, 164]
 
         ```
@@ -25,7 +26,8 @@
         'ABC'
         >>> codes
         [65, 66, 67]
-        >>> codes = [last := ord(c) for c in x] >>> last
+        >>> codes = [last := ord(c) for c in x] 
+        >>> last
         67
         >>> c
         Traceback (most recent call last):
@@ -39,18 +41,22 @@
         >>> beyond_ascii = [ord(s) for s in symbols if ord(s) > 127]
         >>> beyond_ascii
         [162, 163, 165, 8364, 164]
-        >>> beyond_ascii = list(filter(lambda c: c > 127, map(ord, symbols))) >>> beyond_ascii
+        >>> beyond_ascii = list(filter(lambda c: c > 127, map(ord, symbols))) 
+        >>> beyond_ascii
         [162, 163, 165, 8364, 164]
         ```
     - Cartesian product
         ```bash
         >>> colors = ['black', 'white']
         >>> sizes = ['S', 'M', 'L']
-        >>> tshirts = [(color, size) for color in colors for size in sizes] >>> tshirts
+        >>> tshirts = [(color, size) for color in colors for size in sizes] 
+        >>> tshirts
         [('black', 'S'), ('black', 'M'), ('black', 'L'), ('white', 'S'),
-        ('white', 'M'), ('white', 'L')] >>> for color in colors:
-        ... for size in sizes:
-        ... print((color, size)) ...
+        ('white', 'M'), ('white', 'L')] 
+        >>> for color in colors:
+            ... for size in sizes:
+            ...     print((color, size)) 
+            ...
         ('black', 'S')
         ('black', 'M')
         ('black', 'L')
