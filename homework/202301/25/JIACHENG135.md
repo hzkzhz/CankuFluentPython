@@ -18,5 +18,13 @@
     False
     >>> b
         (10, 'alpha', [1, 2, 99])
-        
+
     ```
+
+- `tuple` 有时比 `list` 高效的几点原因
+    - python编译器在evaulate tuple的时候会一次操作产生字节码，但是evaluate list时会把每一个element视为分隔的常量，然后放到数据栈，然后再build list。潜台词可能是需要更多的指令集？
+    - tuple(t) 和 list(t)：一个不copy直接返回t的引用， 一个需要copy
+    - tuple由于在生成时，所需内存大小就确定不会改了，所以直接分配内存，但是list需要扩容啥的，未来可能会重新分配内存
+    - 并且list在扩容分配内存的时候，需要copy 引用，这会使得宝贵的CPU缓存更低效
+
+    
