@@ -1,4 +1,6 @@
 # namedtuple
+
+### It allow you to access their values using descriptive field names and the dot notation
 ```
 from collections import namedtuple
 
@@ -6,3 +8,4 @@ Point = namedtuple("Point", "x y")
 point = Point(x=2, y=4)
 print(point.x, point.y) # 2, 4
 ```
+
