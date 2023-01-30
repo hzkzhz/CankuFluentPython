@@ -1,0 +1,11 @@
+- del and Garbage Collection
+    ```python
+    >>>a=[1,2] 
+    >>>b=a
+    >>> del a
+    >>> b
+    [1, 2] 
+    >>>b=[3]
+    ```
+    - [1, 2] was not affected, because b still points to it.
+    - In CPython, the primary algorithm for garbage collection is `reference counting`. 引用计数算法做垃圾回收
