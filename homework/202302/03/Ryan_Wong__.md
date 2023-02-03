@@ -7,7 +7,7 @@
  - % ： __mod__
  - pow() : __pow__
  - << : __lshift__
- - >> : __rshift__
+ - />/> : __rshift__
  - & : __and__
  - | : __or__
  - ^ : __xor__
