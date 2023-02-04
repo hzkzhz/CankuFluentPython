@@ -17,7 +17,7 @@
     UnboundLocalError: local variable 'b' referenced before assignment
     ```
 
-    - python编译这个function的时候，由于在print后面print了b，生成的字节码会去local scope找b，所以会报错
+    - python编译这个function的时候，由于在print后面赋值了b，生成的字节码会去local scope找b，所以会报错
 
 - 关于闭包
     - To summarize: a closure is a function that retains the bindings of the free variables that exist when the function is defined, so that they can be used later when the func‐ tion is invoked and the defining scope is no longer available.
