@@ -7,3 +7,6 @@ Counter is based on dict, therefore the element type of the data iterable must b
 `AnyStr = TypeVar('AnyStr', bytes, str)`
 
 AnyStr is used in many functions that accept either bytes or str, and return values of the given type.
+
+# Static Protocols
+
