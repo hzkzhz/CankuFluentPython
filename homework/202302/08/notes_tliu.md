@@ -25,3 +25,5 @@ class clock:
             return _result 
         return clocked
 ```
+
+这样的好处在于看起来非常的清晰，而且感觉安全隐患比较少，不会带有闭包这类的。
