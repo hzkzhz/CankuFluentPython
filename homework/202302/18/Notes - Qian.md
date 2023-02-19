@@ -7,3 +7,7 @@ Sequence.register(str)
 Sequence.register(range)
 Sequence.register(memoryview)
 ```
+
+# 即便不注册，抽象基类也能把一个类识别为虚拟子类。
+
+<img width="806" alt="Screen Shot 2023-02-18 at 10 32 40 PM" src="https://user-images.githubusercontent.com/73077953/219932911-12d3bed6-2084-4c69-b5f5-5770b6080f63.png">
