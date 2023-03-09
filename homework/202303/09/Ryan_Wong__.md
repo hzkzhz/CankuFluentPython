@@ -16,6 +16,7 @@ if __name__ == '__main__':
     print(itr.send(2))
     print(next(itr))
     print(itr.send(-1))
+ # 依次输出0 2 3 2
  # yield index 是将index return给外部调用程序。
  # jump = yield 可以接收外部程序通过send()发送的信息，并赋值给jump
  
