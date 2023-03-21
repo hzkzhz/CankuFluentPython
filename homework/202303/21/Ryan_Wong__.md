@@ -7,28 +7,30 @@
     ```python3
     import asyncio
 
+    async def crawling(time_consumed):
+        print('Starting task {}'.format(time_consumed))
+        await asyncio.sleep(int(time_consumed[:-1].split("_")[-1])) # 模拟该次爬取所需的时间
+        print("Ended task {}".format(time_consumed))
 
-    async def crawl_page(url):
-        print('crawling {}'.format(url))
-        sleep_time = int(url.split("_")[-1])
-        await asyncio.sleep(sleep_time)
-        print("OK {}".format(url))
-
-    async def main(urls):
-        tasks = [asyncio.create_task(crawl_page(url)) for url in urls]
+    async def func(urls):
+        tasks = [asyncio.create_task(crawling(x)) for x in urls]
         for task in tasks:
             await task
 
     if __name__ == "__main__":
-        asyncio.run(main(["url_1", "url_2", "url_3", "url_4"]))
+        print("Before: {}".format(int(time.time())))
+        asyncio.run(func(["time_1s", "time_2s", "time_3s", "time_4s"]))
+        print("After: {}".format(int(time.time())))
 
-    output :
-    crawling url_1
-    crawling url_2
-    crawling url_3
-    crawling url_4
-    OK url_1
-    OK url_2
-    OK url_3
-    OK url_4
+    output : (可以看到只用了4s，说明4个爬虫任务并行执行了)
+    Before: 1679418413
+    Starting task time_1s
+    Starting task time_2s
+    Starting task time_3s
+    Starting task time_4s
+    Ended task time_1s
+    Ended task time_2s
+    Ended task time_3s
+    Ended task time_4s
+    After: 1679418417
     ```
