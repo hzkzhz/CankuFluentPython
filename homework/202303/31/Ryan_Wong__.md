@@ -57,9 +57,10 @@ class Stock(Structure):
         self.price = price
 ```
 
-    在交互环境中，打印如下：
+    
     
     ```shell
+    # 在交互环境中，打印如下：
     >>> s = Stock('GOOG',100,490.1)
     >>> s.name
     'GOOG'
