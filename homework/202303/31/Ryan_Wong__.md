@@ -58,6 +58,7 @@ class Stock(Structure):
 ```
 
     在交互环境中，打印如下：
+    
     ```shell
     >>> s = Stock('GOOG',100,490.1)
     >>> s.name
