@@ -1,4 +1,4 @@
-# CankuFluentPython
+# CankuFluentPython（已经完结了）
 
 ## 说明
 - 书在 books/ 目录下
